@@ -13,7 +13,7 @@ public class Main {
         RegistrationPlate reg2 = new RegistrationPlate("FI", "UXE-465");
         RegistrationPlate reg3 = new RegistrationPlate("D", "B WQ-431");
 
-        List<RegistrationPlate> finnish = new ArrayList<RegistrationPlate>();
+        ArrayList<RegistrationPlate> finnish = new ArrayList<RegistrationPlate>();
         finnish.add(reg1);
         finnish.add(reg2);
 
@@ -26,7 +26,7 @@ public class Main {
         System.out.println("Finnish: " + finnish);
         // if the equals method hasn't been overwritten, the same registration plate is repeated in the list
 
-        Map<RegistrationPlate, String> owners = new HashMap<RegistrationPlate, String>();
+        HashMap<RegistrationPlate, String> owners = new HashMap<RegistrationPlate, String>();
         owners.put(reg1, "Arto");
         owners.put(reg3, "Jürgen");
 
@@ -34,5 +34,22 @@ public class Main {
         System.out.println(owners.get(new RegistrationPlate("FI", "ABC-123")));
         System.out.println(owners.get(new RegistrationPlate("D", "B WQ-431")));
         // if the hashCode hasn't been overwritten, the owners are not found
+        
+        VehicleRegister vehicleReg = new VehicleRegister();
+        vehicleReg.add(reg1, "Arto");
+        vehicleReg.add(new RegistrationPlate("UK", "123"), "Arto");
+        vehicleReg.add(reg2, "Jurgen");
+        System.out.println(vehicleReg.get(reg1));
+        System.out.println(vehicleReg.get(new RegistrationPlate("FI", "ABC-123")));
+        System.out.println(vehicleReg.get(new RegistrationPlate("UK", "123")));
+        
+        vehicleReg.printRegistrationPlates();
+        vehicleReg.printOwners();
+        
+        vehicleReg.delete(reg1);
+        System.out.println(vehicleReg.get(reg1));
+        
+        
+        
     }
 }
