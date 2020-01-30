@@ -7,16 +7,14 @@ import java.util.Scanner;
 
 /**
  * A class to perform inspect the characteristics of words in a file.
- * Number of words, words which contain characters, etc.
+ * Number of words, words which contain characters, palindromes, vowels, etc.
  * @author Alex Jenkins
  */
 public class WordInspection {
-    private int wordCount;
     private Scanner reader;
     private List<String> fileLines;
     
     public WordInspection(File file) throws Exception {
-        this.wordCount = 0;
         this.reader = new Scanner(file, "UTF-8");
         this.fileLines = new ArrayList<String>();
         
@@ -24,7 +22,6 @@ public class WordInspection {
             String line = this.reader.nextLine();
             
             if (!line.isEmpty()) {
-                this.wordCount++;
                 this.fileLines.add(line);
             }
         }
@@ -32,7 +29,7 @@ public class WordInspection {
     }
     
     public int wordCount() {
-        return this.wordCount;
+        return this.fileLines.size();
     }
     
     public List<String> wordsContainingZ() {
