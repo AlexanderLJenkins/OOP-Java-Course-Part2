@@ -1,0 +1,6 @@
+
+BUILD FAILED
+/Users/Alex Jenkins/NetBeansProjects/mooc-2013-OOProgrammingWithJava-PART2/week9-week9_26.PhoneSearch/nbproject/build-impl.xml:603: The following error occurred while executing this line:
+/Users/Alex Jenkins/NetBeansProjects/mooc-2013-OOProgrammingWithJava-PART2/week9-week9_26.PhoneSearch/nbproject/build-impl.xml:245: Compile failed; see the compiler error output for details.
+
+Total time: 3 seconds
