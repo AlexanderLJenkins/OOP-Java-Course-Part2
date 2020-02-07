@@ -59,6 +59,26 @@ public class Dungeon {
     
     public void run() {
         // A function to run the dungeon game
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        System.out.println("SEARCH AND DESTROY THE VAMPIRES");
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        System.out.println("");
+        System.out.println("-------------RULES-------------");
+        System.out.println("1) In each go you can type a   ");
+        System.out.println("   list of the below controls ");
+        System.out.println("2) You're '@', vampires are 'v'");
+        System.out.println("3) Get in the same position as ");
+        System.out.println("   a vampire to destroy them!  ");
+        System.out.println("4) Destory them all before your");
+        System.out.println("   time runs out!");
+        System.out.println("-----------CONTROLS------------");
+        System.out.println("In each go, you can type:      ");
+        System.out.println("       w: 1 step up            ");
+        System.out.println("       a: 1 step left          ");
+        System.out.println("       s: 1 step down          ");
+        System.out.println("       d: 1 step right         ");
+        System.out.println("-------------------------------");
+        System.out.println("");
         while(true) {
             if (moves == 0) {
                 // Out of moves!
