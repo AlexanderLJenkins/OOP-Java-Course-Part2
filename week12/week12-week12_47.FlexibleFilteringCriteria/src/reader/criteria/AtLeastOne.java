@@ -10,7 +10,7 @@ public class AtLeastOne implements Criterion {
 
     private final Criterion[] criteria;
     
-    public AtLeastOne(Criterion ... criteria) {
+    public AtLeastOne(Criterion... criteria) {
         this.criteria = criteria;
     }
 
