@@ -9,8 +9,9 @@ import wormgame.game.WormGame;
 public class UserInterface implements Runnable {
 
     private JFrame frame;
-    private WormGame game;
-    private int sideLength;
+    private final WormGame game;
+    private final int sideLength;
+    private DrawingBoard drawingBoard;
 
     public UserInterface(WormGame game, int sideLength) {
         this.game = game;
@@ -36,10 +37,16 @@ public class UserInterface implements Runnable {
     public void createComponents(Container container) {
         // Create drawing board first which then is added into container-object.
         // After this, create keyboard listener which is added into frame-object
+        this.drawingBoard = new DrawingBoard(game, 1);
+        container.add(this.drawingBoard);
+        frame.addKeyListener(new KeyboardListener(game.getWorm()));
     }
-
 
     public JFrame getFrame() {
         return frame;
+    }
+    
+    public Updatable getUpdatable() {
+        return drawingBoard;
     }
 }
